@@ -1,24 +1,13 @@
-# README
+Final Project of 'Projeto de Hiperdocumentos' - UFRGS 2019/2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run the project, install:
 
-Things you may want to cover:
+ruby 2.5.0 or later
 
-* Ruby version
+sqlite3
 
-* System dependencies
+rails 6.0.0
 
-* Configuration
+run 'rails server' on your terminal
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+access http://localhost:3000/books
