@@ -1,4 +1,4 @@
-Final Project of 'Projeto de Hiperdocumentos' - UFRGS 2019/2
+## Final Project of 'Projeto de Hiperdocumentos' - UFRGS 2019/2
 
 To run the project, install:
 
