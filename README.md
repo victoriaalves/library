@@ -2,12 +2,12 @@
 
 To run the project, install:
 
-ruby 2.5.0 or later
+- ruby 2.5.0 or later
 
-sqlite3
+- sqlite3
 
-rails 6.0.0
+- rails 6.0.0
 
-run 'rails server' on your terminal
+- run 'rails server' on your terminal
 
-access http://localhost:3000/books
+- access http://localhost:3000/books
