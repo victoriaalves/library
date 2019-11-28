@@ -2819,3 +2819,86 @@ Processing by BooksController#new as HTML
 Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 6202)
 
 
+Started GET "/books" for ::1 at 2019-11-28 20:08:09 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:17
+  Rendered books/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 8211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 58.6ms | ActiveRecord: 0.7ms | Allocations: 23350)
+
+
+Started GET "/books/2/edit" for ::1 at 2019-11-28 20:08:11 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:15:in `edit'
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 7.9ms | Allocations: 3478)
+  Rendered books/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.5ms | Allocations: 8935)
+
+
+Started POST "/books" for ::1 at 2019-11-28 20:08:14 -0300
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"dDKzqVtbMxQ7mUBMQI6u0Hd3BdtlB/2vgIK3gic/wu7kg81icYQRpoIBtultlEUpESxkn9qTDahBOX4fcqmRsg==", "book"=>{"title"=>"As Intermitências da Morte", "author"=>"José Saramago", "genre"=>"Fantasia", "pages"=>"220", "image"=>"https://img.wook.pt/images/as-intermitencias-da-morte-jose-saramago/MXwxNTcyMzg4NHwxODAzMDI4M3wxNTM0NzE5NjAwMDAw/502x"}, "commit"=>"Save Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:21:in `create'
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "pages", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "As Intermitências da Morte"], ["author", "José Saramago"], ["genre", "Fantasia"], ["pages", 220], ["image", "https://img.wook.pt/images/as-intermitencias-da-morte-jose-saramago/MXwxNTcyMzg4NHwxODAzMDI4M3wxNTM0NzE5NjAwMDAw/502x"], ["created_at", "2019-11-28 23:08:14.708462"], ["updated_at", "2019-11-28 23:08:14.708462"]]
+  ↳ app/controllers/books_controller.rb:21:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:21:in `create'
+Redirected to http://localhost:3000/books/18
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms | Allocations: 2889)
+
+
+Started GET "/books/18" for ::1 at 2019-11-28 20:08:14 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 4987)
+
+
+Started GET "/books" for ::1 at 2019-11-28 20:08:16 -0300
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:17
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 6570)
+
+
+Started DELETE "/books/18" for ::1 at 2019-11-28 20:08:19 -0300
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GWDSYC1AZxho9DD4EHBe8cMoBcVix1fiBqvL0n2XjwgW1b0lezkjmtHTlr5khW5TJsPZZWVPyLx2JU+UR+g1Xg==", "id"=>"18"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:39:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:40:in `destroy'
+Redirected to http://localhost:3000/books
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 2578)
+
+
+Started GET "/books" for ::1 at 2019-11-28 20:08:19 -0300
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:17
+  Rendered books/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 8150)
+
+
